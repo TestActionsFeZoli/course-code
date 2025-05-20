@@ -18,7 +18,6 @@ jobs:
             - name: Display PWD & list files
               run: |
                   pwd
-                  ls -a
                   echo $GITHUB_SHA
                   echo $GITHUB_REPOSITORY
                   echo $GITHUB_WORKSPACE
