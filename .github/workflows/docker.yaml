@@ -17,7 +17,7 @@ jobs:
             - name: Upgrade system
               run: apk upgrade
             - name: Install UV
-              run: apk install uv
+              run: apk add uv
             - name: Log OS data
               run: |
                   python --version
