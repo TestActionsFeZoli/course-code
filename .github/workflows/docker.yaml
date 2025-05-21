@@ -16,11 +16,8 @@ jobs:
               run: apk update
             - name: Upgrade system
               run: apk upgrade
-            - name: Install MariaDB
-              run: apk add --no-cache mariadb-client
-            - name: Log MariaDB & OS data
+            - name: Log OS data
               run: |
-                  mariadb --version
                   cat /etc/os-release
                   apk list --installed
                   df -h
