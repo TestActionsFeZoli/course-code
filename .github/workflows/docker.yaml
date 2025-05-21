@@ -15,6 +15,7 @@ jobs:
             - name: Log Node & OS Versions
               run: |
                   node -v
+                  echo "ZOLI!"
                   cat /etc/os-release
             - name: Log Env
               run: echo $API_URL
