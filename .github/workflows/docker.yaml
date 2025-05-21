@@ -6,12 +6,18 @@ jobs:
     docker-job:
         runs-on: ubuntu-latest
         container:
-            image: node:alpine:latest
+            image: alpine:latest
             env:
                 API_URL: example.com
             ports:
                 - 80
         steps:
+            - name: Update pkg db
+              run: apk update
+            - name: Upgrade system
+              run: apk upgrade
+            - name: Install MySQL
+              run: apk add --no-cache mysql-client
             - name: Log Node & OS Versions
               run: |
                   node -v
