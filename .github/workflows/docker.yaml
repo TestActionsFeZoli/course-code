@@ -17,7 +17,7 @@ jobs:
             - name: Upgrade system
               run: apk upgrade
             - name: Install MariaDB
-              run: apk add --no-cache maridb-client
+              run: apk add --no-cache mariadb-client
             - name: Log MariaDB & OS Versions
               run: |
                   mariadb --version
