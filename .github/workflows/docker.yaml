@@ -1,7 +1,6 @@
 name: Docker Workflow
 
-on:
-    workflow_dispatch:
+on: [push]
 
 jobs:
     docker-job:
