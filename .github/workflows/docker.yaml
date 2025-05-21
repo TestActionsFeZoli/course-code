@@ -18,10 +18,9 @@ jobs:
               run: apk upgrade
             - name: Install MySQL
               run: apk add --no-cache mysql-client
-            - name: Log Node & OS Versions
+            - name: Log MySQL & OS Versions
               run: |
-                  node -v
-                  echo "ZOLI!"
+                  mysql -v
                   cat /etc/os-release
             - name: Log Env
               run: echo $API_URL
