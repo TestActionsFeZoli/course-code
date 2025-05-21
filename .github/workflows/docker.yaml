@@ -16,11 +16,11 @@ jobs:
               run: apk update
             - name: Upgrade system
               run: apk upgrade
-            - name: Install MySQL
+            - name: Install MariaDB
               run: apk add --no-cache mysql-client
-            - name: Log MySQL & OS Versions
+            - name: Log MariaDB & OS Versions
               run: |
-                  mysql -v
+                  mariadb --version
                   cat /etc/os-release
             - name: Log Env
               run: echo $API_URL
