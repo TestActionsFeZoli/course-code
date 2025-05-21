@@ -18,10 +18,12 @@ jobs:
               run: apk upgrade
             - name: Install MariaDB
               run: apk add --no-cache mariadb-client
-            - name: Log MariaDB & OS Versions
+            - name: Log MariaDB & OS data
               run: |
                   mariadb --version
                   cat /etc/os-release
+                  apk list --installed
+                  df -h
             - name: Log Env
               run: echo $API_URL
 
